@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../psr-4/ecommerce-be"
+		}
+	],
+	"settings": {}
+}
