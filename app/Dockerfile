@@ -38,10 +38,8 @@ RUN addgroup -g ${GID} ${GROUP} && \
 
 # Directories
 RUN mkdir -p /var/log \
-    /var/log/supervisor \
-    /var/run/supervisor \
     ${APP_CODE_PATH_CONTAINER} && \
-    chown -R ${USER}:${GROUP} /var/log /var/run/supervisor ${APP_CODE_PATH_CONTAINER}
+    chown -R ${USER}:${GROUP} /var/log ${APP_CODE_PATH_CONTAINER}
 
 WORKDIR ${APP_CODE_PATH_CONTAINER}
 
