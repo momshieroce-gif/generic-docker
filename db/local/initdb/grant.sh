@@ -1,1 +1,0 @@
-mysql -u root -proot -e "GRANT ALL ON *.* TO $MYSQL_USER@'%' with grant option;"
