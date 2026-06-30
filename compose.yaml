@@ -54,7 +54,7 @@ services:
       - app
   
   db:
-    image: mysql:8.4.6
+    image: mariadb:10.11
     ports:
       - ${DB_PORT}:3306
     environment:
@@ -65,7 +65,7 @@ services:
       - TZ=Asia/Tokyo
     volumes:
       - ./db/local/db:/var/lib/mysql
-      - ./db/local/config/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./db/local/config/my.cnf:/etc/mariadb/conf.d/my.cnf
       - ./db/local/initdb:/docker-entrypoint-initdb.d
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
