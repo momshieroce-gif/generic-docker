@@ -3,7 +3,7 @@
 # Install dependencies first
 if [ ! -d "vendor" ]; then
   echo "Installing Composer dependencies..."
-  composer install --no-interaction --optimize-autoloader
+  composer install --no-interaction --optimize-autoloader --process-timeout=600
   if [ $? -ne 0 ]; then
     echo "Composer install failed!"
     exit 1
